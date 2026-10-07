@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>委托橱窗 · 自己配一份报价</title>
+    <meta name="description" content="选规格、加料、填数量，实时看到预估价格。">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="contact.js" defer></script>
+    <script src="listings.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+
+      <header class="site-header">
+        <div class="topbar">
+          <a class="brand" href="index.html">Zhai Hang <span>· Chloé</span></a>
+          <nav class="nav">
+            <a href="index.html">首页</a>
+            <a href="listings.html">委托橱窗</a>
+            <a href="#contact-area">联系方式</a>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换深色模式">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <!-- ========== 橱窗列表 ========== -->
+        <section class="section" id="list-view">
+          <p class="eyebrow" id="intro-eyebrow"></p>
+          <h2 id="intro-title"></h2>
+          <p class="section-sub" id="intro-sub"></p>
+          <div class="listing-grid" id="listing-grid"></div>
+        </section>
+
+        <!-- ========== 配置器（选规格 → 加料 → 数量 → 总价） ========== -->
+        <section class="section" id="detail-view" hidden>
+          <p><a class="back-link" id="back" href="#">← 返回橱窗</a></p>
+
+          <img class="detail-cover" id="d-cover" alt="">
+          <h2 id="d-title"></h2>
+          <p class="section-sub" id="d-desc"></p>
+
+          <!-- 例图区：默认只显示前几张，其余折叠；上面给一个直达配置器的按钮 -->
+          <div class="gallery-head">
+            <p class="gallery-title" id="d-gallery-title"></p>
+            <a class="btn btn-solid btn-sm" href="#configurator">不用看完 · 直接去选规格 ↓</a>
+          </div>
+
+          <!-- 这个橱窗的例图（封面之外的都放这里，点开可放大） -->
+          <div class="gallery" id="d-gallery"></div>
+          <p class="gallery-more-wrap">
+            <button class="btn btn-ghost" id="gallery-more" type="button" hidden></button>
+          </p>
+
+          <!-- 图片放大用的灯箱 -->
+          <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="例图预览" hidden>
+            <button class="lb-btn lb-close" id="lb-close" type="button" aria-label="关闭">×</button>
+            <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="上一张">‹</button>
+            <img class="lb-img" id="lb-img" src="" alt="">
+            <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="下一张">›</button>
+            <p class="lb-caption" id="lb-caption"></p>
+          </div>
+
+          <div class="config" id="configurator" style="max-width:860px; margin:0 auto;">
+
+            <h3 class="cfg-title"><span class="cfg-step">1</span> 选规格</h3>
+            <ul class="option-list" id="d-options"></ul>
+
+            <h3 class="cfg-title"><span class="cfg-step">2</span> 加料 / 附加服务 <span class="cfg-optional">可多选，也可以不加</span></h3>
+            <ul class="addon-list" id="d-addons"></ul>
+
+            <h3 class="cfg-title"><span class="cfg-step">3</span> 数量</h3>
+            <div class="qty-row">
+              <button class="qty-btn" id="qty-minus" type="button" aria-label="减少">－</button>
+              <input class="qty-input" id="qty" type="number" min="1" max="99" value="1">
+              <button class="qty-btn" id="qty-plus" type="button" aria-label="增加">＋</button>
+              <span class="qty-note">同一张图要做两个尺寸／两版，就填 2</span>
+            </div>
+
+            <div class="total-box">
+              <div class="total-left">
+                <span class="total-label">合计（预估）</span>
+                <span class="total-detail" id="d-detail"></span>
+              </div>
+              <span class="total-value" id="d-total">¥0</span>
+            </div>
+
+            <p class="cfg-actions">
+              <button class="btn btn-solid" id="copy-config" type="button">复制这份配置</button>
+              <a class="btn btn-ghost" href="#contact-area">看联系方式</a>
+            </p>
+            <p class="field-hint" style="text-align:center;">
+              把复制的配置发到微信 / QQ，我确认后回复最终价格与排期。这个数字是预估，最终以沟通为准。
+            </p>
+          </div>
+        </section>
+
+        <!-- ========== 联系方式 ========== -->
+        <section class="section" id="contact-area">
+          <p class="eyebrow">联系方式</p>
+          <h2>把配置发给我</h2>
+          <p class="section-sub">微信或 QQ 都可以，直接发消息就行。工作日 24 小时内回复。</p>
+          <div class="contact-boxes" id="d-contact"></div>
+          <div class="qr-inline" id="d-qr"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p class="footer-note">© 2025 Zhai Hang · Chloé · 插画委托</p>
+        <p class="footer-note">本站用 HTML、CSS 与少量 JavaScript 手写完成</p>
+      </footer>
+    </div>
+  </body>
+</html>

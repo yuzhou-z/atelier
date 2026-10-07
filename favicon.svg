@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- 站点图标：朱红圆底 + 白色衬线 Z（浏览器标签页上显示） -->
+  <rect width="64" height="64" rx="12" fill="#A63A2A"/>
+  <text x="32" y="45" text-anchor="middle"
+        font-family="Playfair Display, Georgia, Times New Roman, serif"
+        font-size="38" font-weight="500" fill="#F7F5F1">Z</text>
+</svg>

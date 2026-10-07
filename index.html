@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 标题和描述由 app.js 从 data/content.json 读进来填上 -->
+    <title>接稿中 · Zhai Hang 插画委托 — 头像 / 插画 / 印刷品 / 商用</title>
+    <meta name="description" content="所有稿位体型不限，不接文字设~ 除柜子无雷点，但同人请告知IP，谢谢！ 如果稿件有任何不满意一定及时节点阶段提出，拒绝逆节点修改，不太能接受非锚点画错或质量低于例图外理由在成图阶段退稿，请大人们慎重决定呀！ 最后感谢所有愿意停留的大人！">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="接稿中 · Zhai Hang 插画委托 — 头像 / 插画 / 印刷品 / 商用">
+    <meta property="og:description" content="所有稿位体型不限，不接文字设~ 除柜子无雷点，但同人请告知IP，谢谢！ 如果稿件有任何不满意一定及时节点阶段提出，拒绝逆节点修改，不太能接受非锚点画错或质量低于例图外理由在成图阶段退稿，请大人们慎重决定呀！ 最后感谢所有愿意停留的大人！">
+    <meta property="og:image" content="images/shot-1791399186190-0-1791399186190.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forms.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="contact.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+
+  <body>
+    <div class="page">
+
+      <header class="site-header">
+        <div class="topbar">
+          <a class="brand" href="#top" id="brand">Zhai Hang <span>· Chloé</span></a>
+          <nav class="nav">
+            <a href="listings.html">委托橱窗</a>
+            <a href="#process">接稿流程</a>
+            <a href="#faq">常见问题</a>
+            <a href="#contact">联系方式</a>
+          </nav>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换深色模式">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <main id="top">
+
+        <!-- 首屏 -->
+        <section class="hero">
+          <p class="badge" id="status-badge"><span class="dot"></span><span id="status-text"></span></p>
+          <img class="avatar" id="site-avatar" src="" alt="" hidden>
+          <h1 id="hero-title"></h1>
+          <p class="tagline" id="hero-tagline"></p>
+          <p class="hero-actions">
+            <a class="btn btn-solid" href="listings.html">去橱窗挑规格算价</a>
+            <a class="btn btn-ghost" href="#contact">联系方式</a>
+          </p>
+          <p class="hero-note" id="hero-note"></p>
+        </section>
+
+        <!-- 01 接稿流程 -->
+        <section class="section" id="process">
+          <p class="eyebrow" id="process-eyebrow"></p>
+          <h2 id="process-title"></h2>
+          <div class="grid-4 steps" id="process-grid"></div>
+
+          <p style="text-align:center; margin-top:38px;">
+            <a class="btn btn-solid" href="listings.html">进委托橱窗 · 看例图和价格</a>
+          </p>
+        </section>
+
+        <!-- 02 常见问题 -->
+        <section class="section" id="faq">
+          <p class="eyebrow" id="faq-eyebrow"></p>
+          <h2 id="faq-title"></h2>
+          <div class="faq" id="faq-list"></div>
+        </section>
+
+        <!-- 03 联系方式 -->
+        <section class="section" id="contact">
+          <p class="eyebrow" id="contact-eyebrow"></p>
+          <h2 id="contact-title"></h2>
+          <p class="section-sub" id="contact-sub"></p>
+
+          <div class="contact-boxes" id="contact-boxes"></div>
+          <div class="qr-inline" id="qr-inline"></div>
+
+          <p class="terms" id="contact-terms"></p>
+        </section>
+
+      </main>
+
+      <footer class="footer">
+        <p class="footer-note" id="footer-line1"></p>
+        <p class="footer-note" id="footer-line2"></p>
+      </footer>
+
+    </div>
+
+    <button class="to-top" id="to-top" type="button" aria-label="回到顶部">↑</button>
+  </body>
+</html>

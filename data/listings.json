@@ -1,0 +1,212 @@
+{
+  "intro": {
+    "eyebrow": "橱窗",
+    "title": "委托橱窗",
+    "sub": "选一个规格直接下单，填写需求即可"
+  },
+  "items": [
+    {
+      "id": "avatar",
+      "title": "头像定制",
+      "cover": "images/image-1791399180522.jpg",
+      "desc": "单人头像",
+      "open": true,
+      "slots": 3,
+      "delivery": "不定",
+      "revisions": 2,
+      "tags": [
+        "社交头像",
+        "粉丝牌",
+        "个人标识"
+      ],
+      "options": [
+        {
+          "id": "avatar-solid",
+          "name": "单人头像 · 简单背景",
+          "price": 100
+        },
+        {
+          "id": "avatar-scene",
+          "name": "单人头像 · 插画",
+          "price": 200
+        }
+      ],
+      "addons": [
+        {
+          "id": "revision",
+          "name": "额外修改一次",
+          "mode": "each",
+          "value": 10
+        },
+        {
+          "id": "addon-2",
+          "name": "加急",
+          "mode": "percent",
+          "value": 100
+        },
+        {
+          "id": "addon-3",
+          "name": "商用",
+          "mode": "multiply",
+          "value": 2
+        },
+        {
+          "id": "addon-4",
+          "name": "买断",
+          "mode": "multiply",
+          "value": 3
+        },
+        {
+          "id": "addon-5",
+          "name": "复杂设",
+          "mode": "multiply",
+          "value": 1.5
+        }
+      ],
+      "gallery": [
+        {
+          "image": "images/shot-1791399186190-0-1791399186190-thumb.jpg",
+          "full": "images/shot-1791399186190-0-1791399186190.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "listing-2",
+      "title": "胸像/半身/全身",
+      "cover": "images/image-1791400628029.jpg",
+      "desc": "其他业务都在这里",
+      "open": true,
+      "slots": 3,
+      "delivery": "不定",
+      "revisions": 2,
+      "tags": [],
+      "options": [
+        {
+          "id": "option-1",
+          "name": "胸像",
+          "price": 120
+        },
+        {
+          "id": "listing-2-2",
+          "name": "半身",
+          "price": 160
+        },
+        {
+          "id": "listing-2-3",
+          "name": "全身",
+          "price": 200
+        }
+      ],
+      "addons": [
+        {
+          "id": "rush",
+          "name": "插画（不选则无背景，仅少量装饰）",
+          "mode": "multiply",
+          "value": 2
+        },
+        {
+          "id": "addon-2",
+          "name": "加急",
+          "mode": "percent",
+          "value": 50
+        },
+        {
+          "id": "addon-3",
+          "name": "商",
+          "mode": "multiply",
+          "value": 2
+        },
+        {
+          "id": "addon-4",
+          "name": "断",
+          "mode": "multiply",
+          "value": 3
+        },
+        {
+          "id": "addon-5",
+          "name": "复杂设",
+          "mode": "percent",
+          "value": 50
+        }
+      ],
+      "gallery": [
+        {
+          "image": "images/shot-1791400681052-0-1791400681052-thumb.jpg",
+          "full": "images/shot-1791400681052-0-1791400681052.jpg",
+          "caption": ""
+        },
+        {
+          "image": "images/shot-1791400681381-1-1791400681381-thumb.jpg",
+          "full": "images/shot-1791400681381-1-1791400681381.jpg",
+          "caption": ""
+        }
+      ]
+    },
+    {
+      "id": "listing-3",
+      "title": "QQ人",
+      "cover": "images/image-1791401672351.jpg",
+      "desc": "一键出图QQ人！默认价格为半身不细化",
+      "open": true,
+      "slots": 3,
+      "delivery": "接单后24h",
+      "revisions": 0,
+      "tags": [],
+      "options": [
+        {
+          "id": "option-1",
+          "name": "基础规格",
+          "price": 18
+        }
+      ],
+      "addons": [
+        {
+          "id": "rush",
+          "name": "全身",
+          "mode": "each",
+          "value": 18
+        },
+        {
+          "id": "addon-2",
+          "name": "人物细化",
+          "mode": "each",
+          "value": 18
+        },
+        {
+          "id": "addon-3",
+          "name": "加入背景小物",
+          "mode": "each",
+          "value": 18
+        }
+      ],
+      "gallery": [
+        {
+          "image": "images/shot-1791401681517-0-1791401681517-thumb.jpg",
+          "full": "images/shot-1791401681517-0-1791401681517.jpg",
+          "caption": ""
+        },
+        {
+          "image": "images/shot-1791401681618-1-1791401681618-thumb.jpg",
+          "full": "images/shot-1791401681618-1-1791401681618.jpg",
+          "caption": ""
+        },
+        {
+          "image": "images/shot-1791401681736-2-1791401681736-thumb.jpg",
+          "full": "images/shot-1791401681736-2-1791401681736.jpg",
+          "caption": ""
+        },
+        {
+          "image": "images/shot-1791401681913-3-1791401681913-thumb.jpg",
+          "full": "images/shot-1791401681913-3-1791401681913.jpg",
+          "caption": ""
+        },
+        {
+          "image": "images/shot-1791401682067-4-1791401682067-thumb.jpg",
+          "full": "images/shot-1791401682067-4-1791401682067.jpg",
+          "caption": ""
+        }
+      ]
+    }
+  ]
+}
